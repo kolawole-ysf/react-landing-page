@@ -15,7 +15,6 @@
     color: white;
     position: fixed;
     z-index: 10;
-    overflow: hidden;
 }
 .navbar-logo{
     font-size: 24px;
@@ -45,7 +44,72 @@
 .navbar-list li a:hover{
     border-color: white;
 }
+/* ------------Places------------------- */
+.places{
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.info{
+   width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4px 0px;
+    
+}
+.price{
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.duration{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.count{
+    font-size: 18px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.place-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    position: absolute;
+    top: 400px;
+    right: -50px;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+   box-shadow: 1px 1px 6px black;
+}
+.place-nav div{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+.p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color:rgb(8, 177, 177) ;
+}
+.list{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
 /* ----------------Hero----------------- */
+
 .hero{
     position: relative;
     width: 100%;
@@ -90,6 +154,10 @@
     border-radius: 0 8px 0 8px;
     cursor: pointer;
     transition: all .5s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn-p{
+    margin: 0;
 }
 .btn:hover{
     transform: scale(1.05);
@@ -279,7 +347,7 @@
 /* -------Testimonials---------- */
 .testimonials{
     width: 100%;
-    min-height: 70vh;
+    min-height: 80vh;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -291,16 +359,16 @@
 }
 .services{
     width: 60%;
-    padding: 30px;
+    padding: 20px;
     display: flex;
     gap: 30px;
     align-items: center;
     justify-content: space-between;
     background-color: white;
     position: absolute;
-    top: -25%;
+    top: -20%;
     left: 50%;
-    transform: translate(-50%, 25%);
+    transform: translate(-50%, 20%);
     box-shadow: 2px 2px 8px darkgray;
 }
 .services div{
@@ -322,7 +390,6 @@
 }
 .testimonial{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -331,6 +398,7 @@
 .test-img{
     width: 400px;
     height: 500px;
+    position: relative;
 }
 .test-img img{
     width: 100%;
@@ -339,8 +407,8 @@
 }
 .testimonial-card{
     width: 400px;
-    height: 500px;
-    background-color: whitesmoke;
+    min-height: 500px;
+    background-color: transparent;
     overflow: hidden;
     position: relative;
 }
@@ -502,6 +570,7 @@
     color:rgb(95, 94, 94);
 }
 /* ------------Mobile screen----------- */
+
  @media screen and (max-width: 800px) {
     .icon{
         display: block;
@@ -582,9 +651,21 @@
         min-height: 70vh;
         padding: 20px;
     }
-    .test-img{
-        display: none;
+    .places{
+        padding-top: 20px;
     }
+    .testimonial,.places{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+    .place-nav{
+        right:10px;
+    }
+    /* .test-img{
+        display: none;
+    } */
     .testimonial-card{
         min-width: 300px;
     }
